@@ -27,4 +27,9 @@ public class GLSVGFontParser implements SVGFontParser {
 		throw new IllegalStateException("Unsupported Format!");
 	}
 
+	@Override
+	public float getBaseFontSize() {
+		return SVGFont.BASE_SIZE;
+	}
+
 }

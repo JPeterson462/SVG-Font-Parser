@@ -7,5 +7,7 @@ public interface SVGFontParser {
 	
 	@SuppressWarnings("rawtypes")
 	public SVGFont parseFont(SVGFontFormat format, InputStream source, SVGFontAttributes attributes) throws IOException;
+	
+	public float getBaseFontSize();
 
 }

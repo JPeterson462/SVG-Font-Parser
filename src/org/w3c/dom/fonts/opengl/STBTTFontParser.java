@@ -42,8 +42,8 @@ public class STBTTFontParser implements SVGFontParser {
 			descent = pDescent.get(0);
 			lineGap = pLineGap.get(0);
 		}
-		final int bitmapSize = 512;
-		final float fontSize = 16;
+		final float fontSize = SVGFont.BASE_SIZE;
+		final int bitmapSize = (int) fontSize * 32;
 		STBTTBakedChar.Buffer cdata = init(ttf, info, bitmapSize, bitmapSize, fontSize);
 		HashMap<Character, Rect> bounds = new HashMap<>();
 		try (MemoryStack stack = MemoryStack.stackPush()) {
@@ -79,6 +79,11 @@ public class STBTTFontParser implements SVGFontParser {
 		float scale = STBTruetype.stbtt_ScaleForPixelHeight(info, fontHeight);
 		this.bitmap = new GLBitmap(bitmapWidth, bitmapHeight, bitmap, scale);
 		return cdata;
+	}
+
+	@Override
+	public float getBaseFontSize() {
+		return SVGFont.BASE_SIZE;
 	}
 
 }

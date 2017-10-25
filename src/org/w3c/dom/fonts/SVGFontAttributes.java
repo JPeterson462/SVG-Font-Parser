@@ -320,7 +320,7 @@ public class SVGFontAttributes {
 		hangingSet = true;
 	}
 
-	public float setVIdeographic() {
+	public float getVIdeographic() {
 		return vIdeographic;
 	}
 
@@ -329,7 +329,7 @@ public class SVGFontAttributes {
 		vIdeographicSet = true;
 	}
 
-	public float setVAlphabetic() {
+	public float getVAlphabetic() {
 		return vAlphabetic;
 	}
 
@@ -338,7 +338,7 @@ public class SVGFontAttributes {
 		vAlphabeticSet = true;
 	}
 
-	public float setVMathematical() {
+	public float getVMathematical() {
 		return vMathematical;
 	}
 
@@ -347,7 +347,7 @@ public class SVGFontAttributes {
 		vMathematicalSet = true;
 	}
 
-	public float setVHanging() {
+	public float getVHanging() {
 		return vHanging;
 	}
 
